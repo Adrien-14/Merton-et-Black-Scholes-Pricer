@@ -13,9 +13,9 @@ import numpy as np
 import scipy.stats as si
 
 
-# =============================================================================
+
 # 1. PROCESSUS STOCHASTIQUES
-# =============================================================================
+
 
 class StochasticProcess(ABC):
     """Interface commune à tous les processus de diffusion."""
@@ -83,9 +83,9 @@ class MertonJumpDiffusion(StochasticProcess):
         return np.hstack((np.full((N_paths, 1), self.S0), S))
 
 
-# =============================================================================
+
 # 2. PRODUITS DÉRIVÉS ET PRICING
-# =============================================================================
+
 
 class Option(ABC):
     """Produit dérivé défini par un strike et une maturité."""
@@ -154,9 +154,9 @@ class AnalyticalBlackScholesPricer(Pricer):
         raise NotImplementedError("Formule non implémentée pour ce produit.")
 
 
-# =============================================================================
+
 # 3. UTILISATION ET TESTS
-# =============================================================================
+
 
 if __name__ == "__main__":
     S0 = 100.0
